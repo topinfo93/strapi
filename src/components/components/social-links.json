@@ -1,20 +1,20 @@
 {
-  "collectionName": "components_components_footer_menus",
+  "collectionName": "components_components_social_links",
   "info": {
-    "displayName": "footerMenu",
+    "displayName": "socialLinks",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "linkText": {
+    "text": {
+      "type": "string"
+    },
+    "link": {
       "type": "string"
     },
     "isExternal": {
       "type": "boolean",
       "default": false
-    },
-    "url": {
-      "type": "string"
     }
   }
 }

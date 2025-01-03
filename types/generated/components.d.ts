@@ -69,6 +69,7 @@ export interface ComponentsFooterCta extends Struct.ComponentSchema {
 export interface ComponentsFooterMenu extends Struct.ComponentSchema {
   collectionName: 'components_components_footer_menus';
   info: {
+    description: '';
     displayName: 'footerMenu';
   };
   attributes: {
@@ -164,6 +165,19 @@ export interface ComponentsPartner extends Struct.ComponentSchema {
   };
 }
 
+export interface ComponentsSocialLinks extends Struct.ComponentSchema {
+  collectionName: 'components_components_social_links';
+  info: {
+    description: '';
+    displayName: 'socialLinks';
+  };
+  attributes: {
+    isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    link: Schema.Attribute.String;
+    text: Schema.Attribute.String;
+  };
+}
+
 export interface LayoutFeaturesSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_features_sections';
   info: {
@@ -188,7 +202,7 @@ export interface LayoutFooter extends Struct.ComponentSchema {
     footerMenu: Schema.Attribute.Component<'components.footer-menu', true>;
     footerText: Schema.Attribute.Text;
     logoText: Schema.Attribute.Component<'components.link', false>;
-    socialLink: Schema.Attribute.Component<'components.link', true>;
+    socialLinks: Schema.Attribute.Component<'components.social-links', true>;
   };
 }
 
@@ -199,7 +213,10 @@ export interface LayoutHeader extends Struct.ComponentSchema {
     displayName: 'Header';
   };
   attributes: {
-    logoText: Schema.Attribute.Component<'components.link', false>;
+    isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    linkText: Schema.Attribute.String;
+    logoImage: Schema.Attribute.Media<'images'>;
+    url: Schema.Attribute.String;
   };
 }
 
@@ -232,6 +249,7 @@ declare module '@strapi/strapi' {
       'components.link': ComponentsLink;
       'components.list-items': ComponentsListItems;
       'components.partner': ComponentsPartner;
+      'components.social-links': ComponentsSocialLinks;
       'layout.features-section': LayoutFeaturesSection;
       'layout.footer': LayoutFooter;
       'layout.header': LayoutHeader;

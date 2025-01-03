@@ -14,11 +14,6 @@
     "footerText": {
       "type": "text"
     },
-    "socialLink": {
-      "type": "component",
-      "repeatable": true,
-      "component": "components.link"
-    },
     "footerCTA": {
       "displayName": "footerCTA",
       "type": "component",
@@ -32,6 +27,11 @@
       "type": "component",
       "repeatable": true,
       "component": "components.footer-menu"
+    },
+    "socialLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.social-links"
     }
   }
 }

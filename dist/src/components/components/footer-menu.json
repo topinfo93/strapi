@@ -1,18 +1,19 @@
 {
     "collectionName": "components_components_footer_menus",
     "info": {
-        "displayName": "footerMenu"
+        "displayName": "footerMenu",
+        "description": ""
     },
     "options": {},
     "attributes": {
-        "url": {
+        "linkText": {
             "type": "string"
         },
         "isExternal": {
             "type": "boolean",
             "default": false
         },
-        "linkText": {
+        "url": {
             "type": "string"
         }
     }
