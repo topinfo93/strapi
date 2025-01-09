@@ -20,6 +20,7 @@ export interface ComponentsCaseStudies extends Struct.ComponentSchema {
     displayName: 'caseStudies';
   };
   attributes: {
+    autoGetPosts: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     cases: Schema.Attribute.Relation<'oneToMany', 'api::work.work'>;
     cta: Schema.Attribute.Component<'components.footer-cta', false>;
     title: Schema.Attribute.String;
@@ -160,7 +161,7 @@ export interface ComponentsPartner extends Struct.ComponentSchema {
   attributes: {
     cta: Schema.Attribute.Component<'components.footer-cta', false>;
     description: Schema.Attribute.Text;
-    imageText: Schema.Attribute.Component<'components.image-text', true>;
+    mediaText: Schema.Attribute.Component<'components.image-text', true>;
     title: Schema.Attribute.String;
   };
 }
@@ -213,6 +214,7 @@ export interface LayoutHeader extends Struct.ComponentSchema {
     displayName: 'Header';
   };
   attributes: {
+    headerMenu: Schema.Attribute.Component<'components.footer-menu', true>;
     isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     linkText: Schema.Attribute.String;
     logoImage: Schema.Attribute.Media<'images'>;

@@ -18,6 +18,10 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::work.work"
+    },
+    "autoGetPosts": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

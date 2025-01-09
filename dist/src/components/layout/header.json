@@ -23,6 +23,11 @@
         },
         "url": {
             "type": "string"
+        },
+        "headerMenu": {
+            "type": "component",
+            "repeatable": true,
+            "component": "components.footer-menu"
         }
     }
 }

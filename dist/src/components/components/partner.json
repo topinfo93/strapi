@@ -17,7 +17,7 @@
             "repeatable": false,
             "component": "components.footer-cta"
         },
-        "imageText": {
+        "mediaText": {
             "type": "component",
             "repeatable": true,
             "component": "components.image-text"
